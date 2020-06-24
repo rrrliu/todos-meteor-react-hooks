@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "test": "meteor test --once --driver-package meteortesting:mocha",
-    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "test": "meteor test --once --driver-package meteortesting:mocha --port 8378",
+    "test-on": "TEST_WATCH=1 meteor test --driver-package meteortesting:mocha --port 8378",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha --port 8378",
+    "visualize": "meteor --production --extra-packages bundle-visualizer --port 4000"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
